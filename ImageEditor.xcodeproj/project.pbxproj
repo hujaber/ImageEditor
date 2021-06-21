@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		27EE30672677E4F500E45654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE30662677E4F500E45654 /* AppDelegate.swift */; };
-		27EE30692677E4F500E45654 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE30682677E4F500E45654 /* SceneDelegate.swift */; };
 		27EE306B2677E4F500E45654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE306A2677E4F500E45654 /* ViewController.swift */; };
 		27EE306E2677E4F500E45654 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27EE306C2677E4F500E45654 /* Main.storyboard */; };
 		27EE30702677E4F600E45654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27EE306F2677E4F600E45654 /* Assets.xcassets */; };
 		27EE30732677E4F600E45654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27EE30712677E4F600E45654 /* LaunchScreen.storyboard */; };
+		27EE307B2677E77500E45654 /* ImageEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE307A2677E77500E45654 /* ImageEditor.swift */; };
+		27EE307D267ABAD100E45654 /* CropButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE307C267ABAD100E45654 /* CropButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27EE30632677E4F500E45654 /* ImageEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27EE30662677E4F500E45654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27EE30682677E4F500E45654 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		27EE306A2677E4F500E45654 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27EE306D2677E4F500E45654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27EE306F2677E4F600E45654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27EE30722677E4F600E45654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27EE30742677E4F600E45654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27EE307A2677E77500E45654 /* ImageEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditor.swift; sourceTree = "<group>"; };
+		27EE307C267ABAD100E45654 /* CropButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				27EE30662677E4F500E45654 /* AppDelegate.swift */,
-				27EE30682677E4F500E45654 /* SceneDelegate.swift */,
 				27EE306A2677E4F500E45654 /* ViewController.swift */,
 				27EE306C2677E4F500E45654 /* Main.storyboard */,
 				27EE306F2677E4F600E45654 /* Assets.xcassets */,
 				27EE30712677E4F600E45654 /* LaunchScreen.storyboard */,
 				27EE30742677E4F600E45654 /* Info.plist */,
+				27EE307A2677E77500E45654 /* ImageEditor.swift */,
+				27EE307C267ABAD100E45654 /* CropButton.swift */,
 			);
 			path = ImageEditor;
 			sourceTree = "<group>";
@@ -137,9 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27EE307B2677E77500E45654 /* ImageEditor.swift in Sources */,
 				27EE306B2677E4F500E45654 /* ViewController.swift in Sources */,
 				27EE30672677E4F500E45654 /* AppDelegate.swift in Sources */,
-				27EE30692677E4F500E45654 /* SceneDelegate.swift in Sources */,
+				27EE307D267ABAD100E45654 /* CropButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +292,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ImageEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +311,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ImageEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
