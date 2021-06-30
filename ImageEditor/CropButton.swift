@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol CropButtonDelegate: AnyObject {
-    func didChangeFrame(for button: CropButton, position: CropButton.Position)
-}
-
 class CropButton: UIButton {
     
     enum Position {
@@ -20,19 +16,12 @@ class CropButton: UIButton {
         case bottomLeft
     }
     
-    override var frame: CGRect {
-        didSet {
-            delegate?.didChangeFrame(for: self, position: position)
-        }
-    }
-    
-    weak var delegate: CropButtonDelegate?
-    
     private (set) var position: Position
     
     init(position: Position, frame: CGRect) {
         self.position = position
         super.init(frame: frame)
+        setTitle("X", for: .normal)
     }
     
     required init?(coder: NSCoder) {

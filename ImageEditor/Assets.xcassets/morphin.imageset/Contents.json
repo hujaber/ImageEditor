@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "twitter_12d88ba24b175a8791a7cf26e055e566.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -9,11 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let images = [UIImage(named: "morphin")!, .init(named: "witcher")!, .init(named: "henry")!]
+    
     private lazy var imageView: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.contentMode = .scaleAspectFit
-        imgView.image = UIImage(named: "witcher")
+        imgView.image = images.randomElement()!
         imgView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapImage))
         imgView.addGestureRecognizer(tapGesture)
@@ -35,15 +37,32 @@ class ViewController: UIViewController {
             imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
                                               constant: -50)
         ])
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(reset))
+        tapGesture.numberOfTapsRequired = 3
+        view.addGestureRecognizer(tapGesture)
+        view.isUserInteractionEnabled = true
+    }
+    
+    @objc
+    private func reset() {
+        imageView.image = images.randomElement()
     }
 
     
     @objc
     private func didTapImage() {
-        let imageEditor = ImageEditor(with: imageView.image!)
+        let imageEditor = ImageEditor(with: imageView.image!, delegate: self)
         present(imageEditor, animated: true)
     }
 
+}
+
+extension ViewController: ImageEditorDelegate {
+    func didFinishEditing(_ editedImage: UIImage, in editor: ImageEditor) {
+        self.imageView.image = editedImage
+        editor.dismiss(animated: true)
+    }
 }
 
 
